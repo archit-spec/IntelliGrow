@@ -25,8 +25,8 @@ model = genai.GenerativeModel(
 )
 
 reddit = praw.Reddit(
-    client_id="oCZLQc40KDASsVzyxEgCSQ",  # This is your personal use script
-    client_secret="GB2iotWHqGEnlWKEfDoipsOagnS6Zw",  # This is your secret
+    client_id=client_id,  # This is your personal use script
+    client_secret=client_secret,  # This is your secret
     password="tammu@123",  # Replace with the password for your Reddit account
     user_agent="python:my_reddit_app:v1.0 (by u/Best_Camel_7084)",  # This is your user agent
     username="Best_Camel_7084",  # This is your Reddit username
@@ -35,7 +35,7 @@ reddit = praw.Reddit(
 # Replace 'submission_id' with the ID of the submission you want to read
 submission_id = "1d5q3d8"
 submission = reddit.submission(id=submission_id)
-print(submission)
+print(submission.)
 # Print the title and selftext of the submission
 print(f"Title: {submission.title}")
 print(f"Selftext: {submission.selftext}")

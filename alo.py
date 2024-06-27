@@ -3,9 +3,10 @@ import praw
 import google.generativeai as genai 
 import os
 from dotenv import load_dotenv
+load_dotenv()
 client = OpenAI(
   base_url = "https://integrate.api.nvidia.com/v1",
-  api_key = "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"
+  api_key = api_key
 )
 
 completion = client.chat.completions.create(
@@ -24,8 +25,8 @@ for chunk in completion:
 
 response_text = completion
 reddit = praw.Reddit(
-    client_id="oCZLQc40KDASsVzyxEgCSQ",  # This is your personal use script
-    client_secret="GB2iotWHqGEnlWKEfDoipsOagnS6Zw",  # This is your secret
+    client_id=client_id,  # This is your personal use script
+    client_secret=client_secret,  # This is your secret
     password="tammu@123",  # Replace with the password for your Reddit account
     user_agent="python:my_reddit_app:v1.0 (by u/Best_Camel_7084)",  # This is your user agent
     username="Best_Camel_7084",  # This is your Reddit username
